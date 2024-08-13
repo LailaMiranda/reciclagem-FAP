@@ -1,0 +1,32 @@
+{
+
+  "scripts": {
+
+    "build": "tsc",
+
+    "start": "node dist/index.js",
+
+    "create-db": "ts-node src/config/create-database.ts"
+
+  },
+
+  "devDependencies": {
+
+    "@types/node": "^22.2.0",
+
+    "ts-node": "^10.9.2",
+
+    "typescript": "^5.5.4"
+
+  },
+
+  "dependencies": {
+
+    "mysql2": "^3.11.0",
+
+    "typeorm": "^0.3.20"
+
+  }
+
+}
+
