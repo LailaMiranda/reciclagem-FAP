@@ -15,6 +15,9 @@ Este projeto visa implementar programas de reciclagem em comunidades urbanas com
   - **Atributos:** Tipo de Estratégia, Descrição, Efetividade.
   - **Tipos de Estratégia:** Reciclagem, Composta, Redução de Desperdício, Outra.
 
+### DRE do banco 
+![IMG DRE](imgReadme/dre.jpg)
+
 ## Tecnologias Utilizadas
 
 - **Linguagem:** TypeScript
