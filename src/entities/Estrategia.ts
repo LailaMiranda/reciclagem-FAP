@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { Evento } from './Evento'
 import { TipoEstrategia } from '../enum/TipoEstrategia';
 
@@ -24,8 +24,8 @@ export class Estrategia {
   private efetividade!: number;
 
 
-  @ManyToOne(() => Evento, evento => evento.estrategias)
-  evento!: Evento;
+  @OneToMany(() => Evento, evento => evento.estrategia)
+  eventos!: Evento[];
 
 
   public getIdEstrategia(): number {
@@ -52,10 +52,10 @@ export class Estrategia {
   public setEfetividade(efetividade: number): void {
     this.efetividade = efetividade;
   }
-  public getEvento(): Evento {
-    return this.evento;
+  public getEventos(): Evento[] {
+    return this.eventos;
   }
-  public setEvento(evento: Evento): void {
-    this.evento = evento;
+  public setEventos(eventos: Evento[]): void {
+    this.eventos = eventos;
   }
 }

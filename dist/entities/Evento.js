@@ -51,11 +51,11 @@ let Evento = class Evento {
     setOrganizacaoGestao(organizacaoGestao) {
         this.organizacaoGestao = organizacaoGestao;
     }
-    getEstrategias() {
-        return this.estrategias;
+    getEstrategia() {
+        return this.estrategia;
     }
-    setEstrategias(estrategias) {
-        this.estrategias = estrategias;
+    setEstrategia(estrategia) {
+        this.estrategia = estrategia;
     }
 };
 exports.Evento = Evento;
@@ -85,9 +85,9 @@ __decorate([
     __metadata("design:type", OrganizacaoGestao_1.OrganizacaoGestao)
 ], Evento.prototype, "organizacaoGestao", void 0);
 __decorate([
-    (0, typeorm_1.OneToMany)(() => Estrategia_1.Estrategia, estrategia => estrategia.evento),
-    __metadata("design:type", Array)
-], Evento.prototype, "estrategias", void 0);
+    (0, typeorm_1.ManyToOne)(() => Estrategia_1.Estrategia, estrategia => estrategia.eventos),
+    __metadata("design:type", Estrategia_1.Estrategia)
+], Evento.prototype, "estrategia", void 0);
 exports.Evento = Evento = __decorate([
     (0, typeorm_1.Entity)()
 ], Evento);

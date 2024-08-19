@@ -31,8 +31,8 @@ export class Evento {
   organizacaoGestao!: OrganizacaoGestao;
 
 
-  @OneToMany(() => Estrategia, estrategia => estrategia.evento)
-  estrategias!: Estrategia[];
+  @ManyToOne(() => Estrategia, estrategia => estrategia.eventos)
+  estrategia!: Estrategia;
 
 
   public getId(): number {
@@ -71,10 +71,10 @@ export class Evento {
   public setOrganizacaoGestao(organizacaoGestao: OrganizacaoGestao): void {
     this.organizacaoGestao = organizacaoGestao;
   }
-  public getEstrategias(): Estrategia[] {
-    return this.estrategias;
+  public getEstrategia(): Estrategia {
+    return this.estrategia;
   }
-  public setEstrategias(estrategias: Estrategia[]): void {
-    this.estrategias = estrategias;
+  public setEstrategia(estrategia: Estrategia): void {
+    this.estrategia = estrategia;
   }
 }
