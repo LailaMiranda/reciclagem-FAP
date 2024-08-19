@@ -16,7 +16,9 @@ Este projeto visa implementar programas de reciclagem em comunidades urbanas com
   - **Tipos de Estratégia:** Reciclagem, Composta, Redução de Desperdício, Outra.
 
 ### DRE do banco 
-![IMG DRE](imgReadme/dre.jpg)
+![IMG MER](imgReadme/MER.jpg)
+
+O MER (Modelo Entidade-Relacionamento) é uma ferramenta de modelagem que descreve as entidades de um sistema, seus atributos e os relacionamentos entre elas. Ele ajuda a estruturar e visualizar a organização dos dados e as interações entre diferentes componentes de um banco de dados.
 
 ## Tecnologias Utilizadas
 
@@ -102,6 +104,7 @@ setup().catch(error => console.error('Setup failed:', error));
 O projeto utiliza MySQL. Certifique-se de que o MySQL esteja rodando localmente e que a configuração no arquivo AppDataSource.ts esteja correta:
 
 ```ts
+
 import { DataSource } from 'typeorm';
 import { Estrategia } from '../entities/Estrategia';
 import { Evento } from '../entities/Evento';
@@ -119,7 +122,25 @@ export const AppDataSource = new DataSource({
   synchronize: true, 
   logging: true,
 });
+
 ```
+## Utilizando QUERY
+```ts
 
+SELECT * FROM localizacao;
+SELECT * FROM organizacao_gestao;
+SELECT * FROM evento;
+SELECT * FROM estrategia;
 
+SELECT * FROM estrategia WHERE tipoEstrategia = 'Reciclagem';
+SELECT * FROM estrategia WHERE tipoEstrategia = 'Outra';
 
+SELECT e.id AS evento_id, e.nome AS evento_nome, s.id_Estrategia, s.descricao AS estrategia_descricao, s.efetividade
+FROM evento e
+JOIN estrategia s ON e.id = s.eventoId;
+
+SELECT e.id AS evento_id, e.nome AS evento_nome, l.cep, l.rua, l.cidade, l.estado
+FROM evento e
+JOIN localizacao l ON e.localizacaoCep = l.cep;
+
+```
