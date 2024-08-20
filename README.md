@@ -21,7 +21,7 @@ Este projeto visa implementar programas de reciclagem em comunidades urbanas com
 Um diagrama de classes UML é uma ferramenta visual que ajuda a mostrar como as partes de um sistema de software estão organizadas e como elas se relacionam. Imagine-o como um "mapa" que descreve os componentes principais de um software e como eles se conectam.
 
 
-### DRE do banco 
+### MER do banco 
 ![IMG MER](imgReadme/MER.jpg)
 
 O MER (Modelo Entidade-Relacionamento) é uma ferramenta de modelagem que descreve as entidades de um sistema, seus atributos e os relacionamentos entre elas. Ele ajuda a estruturar e visualizar a organização dos dados e as interações entre diferentes componentes de um banco de dados.
