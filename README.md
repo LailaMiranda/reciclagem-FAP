@@ -64,7 +64,6 @@ Resumindo, o código garante que o banco exista antes de inicializar a aplicaç�
 
 
 ```ts
-git rebase -i HEAD~N
 import mysql from 'mysql2/promise';
 import { AppDataSource } from './data-source';
 
