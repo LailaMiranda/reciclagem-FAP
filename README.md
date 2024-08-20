@@ -35,7 +35,7 @@ O MER (Modelo Entidade-Relacionamento) é uma ferramenta de modelagem que descre
 
 ## Como Executar o Projeto
 
-0. ***Instalando o typeORM*
+0. **Instalando o typeORM**
 npm install typeorm
 
 1. **Clone o repositório:**
