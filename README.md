@@ -15,6 +15,12 @@ Este projeto visa implementar programas de reciclagem em comunidades urbanas com
   - **Atributos:** Tipo de Estratégia, Descrição, Efetividade.
   - **Tipos de Estratégia:** Reciclagem, Composta, Redução de Desperdício, Outra.
 
+### UML do banco 
+![IMG MER](imgReadme/UML.jpg)
+
+Um diagrama de classes UML é uma ferramenta visual que ajuda a mostrar como as partes de um sistema de software estão organizadas e como elas se relacionam. Imagine-o como um "mapa" que descreve os componentes principais de um software e como eles se conectam.
+
+
 ### DRE do banco 
 ![IMG MER](imgReadme/MER.jpg)
 
@@ -58,6 +64,7 @@ Resumindo, o código garante que o banco exista antes de inicializar a aplicaç�
 
 
 ```ts
+git rebase -i HEAD~N
 import mysql from 'mysql2/promise';
 import { AppDataSource } from './data-source';
 
@@ -96,6 +103,7 @@ async function setup() {
   await initializeDataSource();
 }
 setup().catch(error => console.error('Setup failed:', error));
+
 ```
 
 
